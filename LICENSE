@@ -1,0 +1,17 @@
+Copyright (c) 2026 montx2. Todos os direitos reservados.
+
+PROPRIETÁRIO — NÃO É SOFTWARE LIVRE
+
+Este repositório contém o código-fonte da extensão "Optante Fácil — Simples
+Nacional/MEI". O código é disponibilizado apenas para fins de manutenção interna
+e revisão pelo autor.
+
+Nenhuma licença de uso, cópia, modificação, distribuição, sublicenciamento ou
+venda é concedida, expressa ou implicitamente, exceto mediante autorização
+escrita do titular dos direitos autorais.
+
+O pacote publicado na Chrome Web Store é gerado a partir deste código por
+`npm run package` e é distribuído na forma minificada, sem conceder ao usuário
+final qualquer direito sobre o código-fonte além do uso da extensão instalada.
+
+O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIAS DE QUALQUER NATUREZA.

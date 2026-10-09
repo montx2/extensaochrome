@@ -1,0 +1,23 @@
+{
+  "name": "optante-facil",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Extensao Chrome/Edge (MV3) que preenche em lote o campo Simples Nacional/MEI na Declaracao de Servicos Contratados do ISS.net.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "build": "node scripts/build.mjs",
+    "package": "node scripts/build.mjs --zip",
+    "clean": "node scripts/build.mjs --clean",
+    "release": "npm run check && npm test && npm run build -- --zip && npm run smoke"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "jsdom": "^27.1.0"
+  }
+}
