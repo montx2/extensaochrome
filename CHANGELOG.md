@@ -45,6 +45,11 @@ padrão da Chrome Web Store.
 
 ### Corrigido
 
+- `npm run package` / `npm run release` no **Windows**: o ZIP passa a ser
+  gerado em Node puro. Antes o build chamava o comando Unix `zip` e falhava
+  com `spawnSync zip ENOENT`.
+- Script de testes lista os arquivos explicitamente, sem depender de glob
+  (`tests/*.test.mjs` não expande no Prompt de Comando do Windows).
 - O botão **Parar** agora interrompe entre linhas, sem esperar a espera longa
   terminar (antes podia levar vários segundos).
 - Contagem de progresso não é mais distorcida quando a grade é recarregada no
