@@ -97,15 +97,19 @@ export function createFakeBridge(win, { token = 'token-teste' } = {}) {
     const found = events.find((e) => e.type === type && (!match || (e.payload && match(e.payload))));
     if (found) return Promise.resolve(found);
     return new Promise((resolve, reject) => {
-      const waiter = { type, match, resolve };
-      waiters.push(waiter);
-      setTimeout(() => {
+      const waiter = { type, match };
+      waiter.timer = setTimeout(() => {
         const index = waiters.indexOf(waiter);
         if (index >= 0) {
           waiters.splice(index, 1);
           reject(new Error(`timeout esperando evento "${type}"`));
         }
       }, timeout);
+      waiter.resolve = (data) => {
+        clearTimeout(waiter.timer);
+        resolve(data);
+      };
+      waiters.push(waiter);
     });
   }
 

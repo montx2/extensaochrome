@@ -117,6 +117,13 @@ npm run package      # dist/ + release/optante-facil-vX.Y.Z.zip
 npm run release      # check + test + pacote (use antes de publicar)
 ```
 
+O ZIP é gerado em Node puro — **não precisa** do comando `zip` do sistema.
+No Windows (PowerShell ou Prompt de Comando) os mesmos `npm run …` funcionam.
+
+Se o `npm install` avisar sobre *install scripts* do `esbuild`, libere o
+postinstall (`npm install-scripts approve esbuild` no npm 11+) ou rode
+`npm install --ignore-scripts=false`. Sem o binário do esbuild o `build` falha.
+
 Para testar no navegador: `chrome://extensions` → **Modo do desenvolvedor** →
 **Carregar sem compactação** → escolha a pasta `src` (ou `dist` para testar exatamente
 o que vai para a loja).
@@ -169,7 +176,6 @@ checklist de envio.
    forçadamente com `ExtensionInstallForcelist` (política de grupo), sem aviso
    para o usuário e sem custo.
 
-## Solução de problemas
 ## Solução de problemas
 
 | Sintoma | Causa provável | O que fazer |
