@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "Optante Fácil — Simples Nacional/MEI",
+    "description": "Nome da extensão exibido na loja e no navegador."
+  },
+  "extDesc": {
+    "message": "Marca em lote Não Optante, Optante SN ou Optante MEI na Declaração de Serviços Contratados do ISS.net.",
+    "description": "Descrição curta exibida na loja e em chrome://extensions."
+  },
+  "actionTitle": {
+    "message": "Optante Fácil — marcar Simples Nacional/MEI em lote",
+    "description": "Texto exibido ao passar o mouse sobre o ícone da extensão."
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Optante Fácil</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="head">
+    <span class="logo" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6 9 17l-5-5"></path>
+      </svg>
+    </span>
+    <div class="brand">
+      <strong>Optante Fácil</strong>
+      <span id="version" class="muted"></span>
+    </div>
+    <span id="live" class="live" hidden title="Processando em segundo plano"></span>
+  </header>
+
+  <main>
+    <section class="card" id="statusCard">
+      <p class="eyebrow" id="eyebrow">Status</p>
+      <p class="headline" id="headline">Procurando a página do ISS.net…</p>
+      <p class="sub" id="sub"></p>
+      <div class="bar" id="bar" hidden><i id="fill"></i></div>
+    </section>
+
+    <section class="card" id="controlCard" hidden>
+      <p class="eyebrow">Marcar linhas pendentes como</p>
+      <div class="seg" id="seg" role="radiogroup" aria-label="Valor a aplicar"></div>
+      <button class="primary" id="go" type="button"></button>
+    </section>
+
+    <section class="card" id="emptyCard" hidden>
+      <p class="headline small">Nenhuma aba do ISS.net aberta</p>
+      <p class="sub">Abra a <b>Declaração de Serviços Contratados &gt; Incluir</b> e recarregue a página (F5) depois de instalar a extensão.</p>
+      <a class="ghost" id="openSite" href="https://www.issnetonline.com.br/itauna/online/" target="_blank" rel="noreferrer noopener">Abrir o ISS.net</a>
+    </section>
+
+    <section class="card settings" id="settingsCard" hidden>
+      <div class="row">
+        <label for="speed">Velocidade</label>
+        <select id="speed"></select>
+      </div>
+      <div class="row">
+        <label for="notify">Avisar ao concluir</label>
+        <input type="checkbox" id="notify" class="switch">
+      </div>
+      <div class="row">
+        <label for="keepAwake" title="Mantém o processamento ativo quando a aba está em segundo plano">Segundo plano</label>
+        <input type="checkbox" id="keepAwake" class="switch">
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span class="lock" aria-hidden="true">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+      </svg>
+    </span>
+    <span>Nada sai do seu navegador.</span>
+    <a id="privacy" href="https://docs.google.com/document/d/1f-1R8r-VFWlaSVw0wi68d5rSwynmSh2bivbO57-lfak/edit?usp=sharing" target="_blank" rel="noreferrer noopener">Privacidade</a>
+  </footer>
+
+  <script src="../shared/protocol.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

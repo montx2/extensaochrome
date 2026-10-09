@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "Optante Fácil — Simples Nacional/MEI",
+    "description": "Extension name shown in the store and browser."
+  },
+  "extDesc": {
+    "message": "Bulk-sets Não Optante, Optante SN or Optante MEI in the ISS.net Declaração de Serviços Contratados screen.",
+    "description": "Short description shown in the store and in chrome://extensions."
+  },
+  "actionTitle": {
+    "message": "Optante Fácil — bulk set Simples Nacional/MEI",
+    "description": "Tooltip for the extension icon."
+  }
+}

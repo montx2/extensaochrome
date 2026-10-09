@@ -1,0 +1,182 @@
+:root {
+  --brand: #17566f;
+  --accent: #2b7a9b;
+  --ink: #1c2b36;
+  --muted: #6b7c88;
+  --line: #e4eaef;
+  --bg: #f6f8fa;
+  --danger: #b4372c;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  width: 322px;
+  background: var(--bg);
+  color: var(--ink);
+  font: 13px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- Cabeçalho ---------- */
+.head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #fff;
+  flex: none;
+}
+
+.brand { display: flex; flex-direction: column; line-height: 1.2; }
+.brand strong { font-size: 13.5px; font-weight: 650; letter-spacing: .1px; }
+.muted { color: var(--muted); font-size: 11.5px; }
+
+.live {
+  margin-left: auto;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(43, 122, 155, .18);
+}
+
+/* ---------- Cartões ---------- */
+main { padding: 10px; display: grid; gap: 10px; }
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.headline { margin: 0; font-size: 14.5px; font-weight: 600; }
+.headline.small { font-size: 13.5px; }
+.headline b { color: var(--brand); }
+.sub { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+.sub.alert { color: var(--danger); }
+
+.bar {
+  height: 4px;
+  margin-top: 10px;
+  background: #e9eff3;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s ease; }
+
+/* ---------- Seletor ---------- */
+.seg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding: 3px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+
+.seg button {
+  padding: 7px 2px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #4a5b68;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.seg button:hover:not([aria-checked="true"]) { color: var(--ink); }
+.seg button[aria-checked="true"] {
+  background: #fff;
+  color: var(--brand);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(16, 40, 56, .16);
+}
+.seg.locked button { cursor: default; opacity: .55; }
+
+/* ---------- Botões ---------- */
+.primary {
+  width: 100%;
+  margin-top: 10px;
+  padding: 9px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.primary:hover:not(:disabled) { background: #12465c; }
+.primary:disabled { background: #e1e8ed; color: #8a9aa5; cursor: default; }
+.primary.stop { background: #fff; color: var(--danger); border-color: #e3b5b0; }
+.primary.stop:hover:not(:disabled) { background: #fdf3f2; }
+
+.ghost {
+  display: block;
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--brand);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+.ghost:hover { background: #f6fafb; }
+
+/* ---------- Ajustes ---------- */
+.settings { display: grid; gap: 8px; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.row label { color: var(--ink); font-size: 12.5px; }
+.row select {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 4px 6px;
+  background: #fff;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.switch { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+
+/* ---------- Rodapé ---------- */
+.foot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 14px 12px;
+  border-top: 1px solid var(--line);
+  background: #fff;
+  color: var(--muted);
+  font-size: 11.5px;
+}
+.foot a { margin-left: auto; color: var(--brand); text-decoration: none; font-weight: 600; }
+.foot a:hover { text-decoration: underline; }
+.lock { display: inline-flex; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
