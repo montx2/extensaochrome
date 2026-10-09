@@ -1,5 +1,10 @@
 # Textos para a Chrome Web Store
 
+> ⚠️ **A Chrome Web Store cobra US$ 5 únicos** para criar a conta de
+> desenvolvedor — inclusive para itens não listados.
+> **Para publicar de graça e oculta (só por link), use a Microsoft Edge Add-ons:
+> veja [edge-addons.md](edge-addons.md).** É o mesmo pacote, sem alteração.
+
 Tudo pronto para copiar e colar no painel do desenvolvedor.
 Peças gráficas prontas: `store/promo/marquee-1400x560.png` e
 `store/promo/small-promo-440x280.png`. Capturas de tela: veja
@@ -167,4 +172,6 @@ Pode ser desativada a qualquer momento no popup, e a extensão funciona sem ela.
 - [ ] URL pública da política de privacidade informada
 - [ ] Justificativa de cada permissão preenchida
 - [ ] Finalidade única declarada
-- [ ] Conta de desenvolvedor verificada (taxa única de US$ 5)
+- [ ] Conta de desenvolvedor verificada (**taxa única de US$ 5**)
+- [ ] (Alternativa sem custo) Publicada oculta na Microsoft Edge Add-ons —
+      `edge-addons.md`

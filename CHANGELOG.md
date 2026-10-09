@@ -28,6 +28,8 @@ padrão da Chrome Web Store.
 - Política de privacidade, documento de segurança, textos da loja e peças de
   divulgação (marquee 1400x560 e promo 440x280).
 - Ícones novos (16, 32, 48, 128), gerados por script.
+- Guia de publicação **gratuita** na Microsoft Edge Add-ons (oculta, só por link)
+  e `INSTALAR.md` com o passo a passo para a equipe.
 
 ### Alterado
 

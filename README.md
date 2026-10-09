@@ -77,7 +77,7 @@ garante a velocidade normal.
 
 Veja [PRIVACY.md](PRIVACY.md) e [SECURITY.md](SECURITY.md).
 
-Política publicada (usar essa URL no envio da loja):
+Política publicada (use essa URL no envio da loja):
 <https://docs.google.com/document/d/1f-1R8r-VFWlaSVw0wi68d5rSwynmSh2bivbO57-lfak/edit?usp=sharing>
 — lembre de deixá-la como **Qualquer pessoa com o link → Leitor**.
 
@@ -127,24 +127,49 @@ Regenerar ícones e peças da loja (requer Pillow):
 python3 tools/make_assets.py
 ```
 
-## Publicação na Chrome Web Store
+## Publicação
 
-1. `npm run release` — gera `release/optante-facil-vX.Y.Z.zip`.
-2. Acesse o [painel do desenvolvedor](https://chrome.google.com/webstore/devconsole)
-   (taxa única de US$ 5), **Novo item** e envie o ZIP.
-3. Preencha com os textos prontos em [store/listing.md](store/listing.md).
-4. **Privacidade**: informe a URL pública da política (o `PRIVACY.md` publicado)
-   e declare que a extensão não coleta dados.
-5. **Justificativa de permissões**: o modelo está em `store/listing.md`, seção
-   "Permissões — justificativa".
-6. **Capturas de tela**: siga `store/screenshots/README.md` (são obrigatórias e
-   precisam mostrar a extensão em uso).
-7. Envie para revisão. O tempo médio é de 1 a 3 dias úteis.
+### Sem custo: Microsoft Edge Add-ons (recomendado)
 
-Dica: para distribuir só para a equipe, publique como **não listada**
-(*unlisted*). O item não aparece nas buscas da loja, mas funciona por link — sem
-o aviso de "extensão do desenvolvedor" que aparece no modo descompactado.
+A **Microsoft Edge Add-ons não cobra taxa nenhuma** e aceita publicação
+**oculta** (*hidden*): o item fica fora das buscas e só instala quem recebe o
+link. Como o Edge é Chromium, o mesmo pacote funciona sem alteração.
 
+Passo a passo completo, com todos os campos prontos para copiar:
+**[store/edge-addons.md](store/edge-addons.md)**.
+
+Resumo:
+
+```bash
+npm run release                      # check + testes + ZIP (release/*.zip)
+```
+
+1. Conta gratuita em <https://partner.microsoft.com/dashboard/microsoftedge/overview>
+   (conta Microsoft pessoal).
+2. **Criar nova extensão** → envie o ZIP → **Visibilidade: Hidden**.
+3. Preencha descrição, capturas, política de privacidade e as notas de
+   certificação (todos os textos estão prontos no guia).
+4. Publicar. Revisão em até 7 dias úteis.
+
+Depois é só mandar o link da loja para a equipe — o passo a passo para o usuário
+final está em [INSTALAR.md](INSTALAR.md).
+
+### Chrome Web Store (taxa de US$ 5)
+
+A Chrome Web Store cobra **US$ 5 únicos** para criar a conta de desenvolvedor,
+inclusive para itens **não listados**. Se fizer sentido pagar (por exemplo, para
+que a equipe use Chrome), o processo está em
+[store/listing.md](store/listing.md), com textos, justificativa de permissões e
+checklist de envio.
+
+### Distribuição interna para quem usa Chrome
+
+1. **Instalação manual** (modo desenvolvedor), sem custo: [INSTALAR.md](INSTALAR.md).
+2. **Política da empresa**: em máquinas gerenciadas, o TI pode instalar
+   forçadamente com `ExtensionInstallForcelist` (política de grupo), sem aviso
+   para o usuário e sem custo.
+
+## Solução de problemas
 ## Solução de problemas
 
 | Sintoma | Causa provável | O que fazer |

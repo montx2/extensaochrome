@@ -8,7 +8,7 @@ não podem ser geradas por script. Este guia deixa o processo rápido.
 | Item | Requisito |
 | --- | --- |
 | Formato | PNG (preferível) ou JPEG |
-| Tamanho | 1280x800 px (recomendado) ou 640x400 px |
+| Tamanho | 1280x800 px (recomendado). Chrome aceita também 640x400; o Edge aceita 640x480 |
 | Quantidade | de 1 a 5 |
 | Conteúdo | a extensão em uso, sem moldura de janela, sem bordas e sem anotações soltas |
 | Proporção | 16:10 |
